@@ -1,8 +1,6 @@
 <?php
 include "./../App/configuracao.php";
-include "./../App/Libraries/Rota.php";
-include "./../App/Libraries/Controller.php";
-include "./../App/Libraries/Database.php";
+include "./../App/autoload.php";
 
 $db = new Database;
 $db->query("SELECT * FROM posts");
