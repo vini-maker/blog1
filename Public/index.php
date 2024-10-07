@@ -5,14 +5,19 @@ include "./../App/Libraries/Controller.php";
 include "./../App/Libraries/Database.php";
 
 $db = new Database;
-$id = 2;
+$db->query("SELECT * FROM posts");
+$db->resultado();
+echo $db->resultado()->titulo;
+/*
+//deletar informação do banco
+$id = 6;
 $db->query("DELETE FROM posts WHERE id = :id");
 $db->bind(":id",$id);
 
 $db->executa();
 echo '<hr> Total Resultados: '.$db->totalResuldados();
 
-/*
+//atualizar o banco
 date_default_timezone_set('America/Cuiaba');
 $id = 2;
 $usuarioId = 12;
@@ -31,10 +36,10 @@ $db->bind(':criadoEm',$criadoEm);
 $db->executa();
 //echo '<hr>Total resultados: '.$db->totalResultados(); 
 
-
-$usuarioId = 10;
-$titulo = "3º  vespertino";
-$texto = "O terceiro vespertino está conversando muito";
+//inserir dados no banco
+$usuarioId = 8;
+$titulo = "Linguagem de Programação";
+$texto = "Teste de algoritmos";
 
 $db->query("INSERT INTO posts (usuario_id, titulo, texto) VALUES (:usuario_id, :titulo, :texto)");
 
@@ -46,6 +51,7 @@ $db->executa();
 
 echo '<hr>Total Resultados: '.$db->totalResuldados();
 echo '<hr>Último ID: '.$db->ultimoIdInserido();
+
 */
 ?>
 <!DOCTYPE html>
