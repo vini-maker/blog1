@@ -6,12 +6,18 @@ include "./../App/Libraries/Database.php";
 
 $db = new Database;
 $db->query("SELECT * FROM posts");
+foreach($db->resultados() as $post){
+    echo $post->titulo .' | '. $post->texto.'<br>';
+}
+/*
+//consultar um valor no banco
+$db->query("SELECT * FROM posts ORDER BY id DESC");
 $db->resultado();
 echo $db->resultado()->titulo;
-/*
+
 //deletar informação do banco
 $id = 6;
-$db->query("DELETE FROM posts WHERE id = :id");
+$db- >query("DELETE FROM posts WHERE id = :id");
 $db->bind(":id",$id);
 
 $db->executa();
