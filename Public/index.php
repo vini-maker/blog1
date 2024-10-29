@@ -5,12 +5,13 @@ include "./../App/Libraries/Controller.php";
 include "./../App/Libraries/Database.php";
 
 $db = new Database;
+
 $id = 2;
 $db->query("DELETE FROM posts WHERE id = :id");
 $db->bind(":id",$id);
 
 $db->executa();
-echo '<hr> Total Resultados: '.$db->totalResuldados();
+echo '<hr> Total Resultados: '.$db->totalResultados();
 
 /*
 date_default_timezone_set('America/Cuiaba');
@@ -20,7 +21,7 @@ $titulo = 'Titulo Editado';
 $texto = 'Texto editado';
 $criadoEm = date('Y-m-d H:i:s');
 
-$db->query("UPDATE posts SET usuario_id= :usuario_id, titulo= :titulo, texto=:texto, criado_em=:criado_Em WHERE id=:id");
+$db->query("UPDATE posts SET usuario_id= :usuario_id, titulo= :titulo, texto=:texto, criado_em=:criadoEm WHERE id=:id");
 
 $db->bind(':id',$id);
 $db->bind(':usuario_id',$usuarioId);
@@ -29,9 +30,9 @@ $db->bind(':texto',$texto);
 $db->bind(':criadoEm',$criadoEm);
 
 $db->executa();
-//echo '<hr>Total resultados: '.$db->totalResultados(); 
+echo '<hr>Total resultados: '.$db->totalResultados(); 
 
-
+/*
 $usuarioId = 10;
 $titulo = "3º  vespertino";
 $texto = "O terceiro vespertino está conversando muito";

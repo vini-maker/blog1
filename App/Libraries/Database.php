@@ -70,7 +70,7 @@ class Database{
     }//fim da função resultados
 
     //retorna o número de linhas afetadas pela instrução SQL
-    public function totalResuldados(){
+    public function totalResultados(){
         return $this->stmt->rowCount();
     }//fim da função totalResuldados
 
