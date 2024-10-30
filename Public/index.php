@@ -1,13 +1,13 @@
 <?php
 include "./../App/configuracao.php";
 include "./../App/autoload.php";
-
+/*
 $db = new Database;
 $db->query("SELECT * FROM posts");
 foreach($db->resultados() as $post){
     echo $post->titulo .' | '. $post->texto.'<br>';
 }
-/*
+
 //consultar um valor no banco
 $db->query("SELECT * FROM posts ORDER BY id DESC");
 $db->resultado();
