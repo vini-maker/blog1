@@ -20,9 +20,13 @@
 
             <!-- Botões alinhados à direita da tela -->
             <div class="position-absolute" style="right: 0;">
-                <a class="btn btn-info mr-3"
+                <a class="btn btn-success mr-3"
                  href="<?=URL?>/usuarios/cadastrar" data-tooltip="tooltip" title="Não tem uma conta? Cadastre-se">Cadastre-se</a>
+<<<<<<< HEAD
                 <a class="btn btn-info" href="<?=URL?>/usuarios/logar" data-tooltip="tooltip" title="Tem uma conta? Faça login">Entrar</a>
+=======
+                <a class="btn btn-success" href="#" data-tooltip="tooltip" title="Tem uma conta? Faça login">Entrar</a>
+>>>>>>> 32d402b3444156cfb0a77c0abb71aea9026803c9
             </div>
         </nav>
     </div>
